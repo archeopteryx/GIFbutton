@@ -22,25 +22,38 @@ function displayGiphyContent () {
 		//loops through each of the 10 items in pulled by the giphy API
 		for (var i = 0; i < results.length; i++) {
 			//creates a div with class "newItem" for each gif and rating
-			var giphyDiv = $("<div class='newItem'>");
+			var giphyDiv = $("<div class='newItem' style='border-style:double;'>");
 			//assigns a variable with the value of the rating
 			var rating = results[i].rating;
 			//makes a p tag to place the rating into
 			var p = $("<p>").text("This GIF is rated: " + rating);
 			//makes an img tag to place the image into
 			var gifImage = $("<img>");
+			//sets whether image is playing based on imgPlaying boolean 
+			if (imgPlaying = true) {
+				// sets src to the playing url
+				// gives the above img tag a src attribute to a specific one of the API's gif
+				gifImage.attr("src", results[i].images.fixed_height.url);
+			}
+			// else sets it to the still image url
+			else {
+				gifImage.attr("src", results[i].images.fixed_height_still.url);
+			}
 			//changes imgPlaying to paused if image is clicked, since default is true
-			gifImage.on("click", function(){
+			gifImage.on("click", function(response){
+				console.log(results[i])
+				//changes imgPlaying to false, also sets img src attr to the still url
 				if (imgPlaying = true) {
 					imgPlaying = false;
+					gifImage.attr("src", results.images.fixed_height_still.url);
 				}
+				//changes imgPlaying to true, also sets img src attr to the playing url
 				else {
 					imgPlaying = true;
+					gifImage.attr("src", results.images.fixed_height.url);
 				}
 				console.log(imgPlaying);
 			});
-			//gives the above img tag a src attribute to a specific one of the API's gif
-			gifImage.attr("src", results[i].images.fixed_height.url);
 
 			//prepends the rating and then the image below it
 			giphyDiv.prepend(gifImage);

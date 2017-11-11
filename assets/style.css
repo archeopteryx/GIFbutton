@@ -1,4 +1,38 @@
 body {
 	font-family: 'Abril Fatface', cursive;
-	
+}
+
+h1 {
+	background-color: #bbeebb;
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#addButton {
+	background-color: #4CAF50;
+	font-family: 'Abril Fatface', cursive;
+	color: white;
+	font-size: 14px;
+	display: inline-block;
+	margin: 0px 20px 10px 20px;
+}
+
+#clearPage {
+	background-color: red;
+	font-family: 'Abril Fatface', cursive;
+	color: white;
+	font-size: 14px;
+	display: inline-block;
+	margin: 10px 20px 20px 20px;
+}
+
+.newSubject {
+	background-color: #d3eef6;
+	font-family: 'Abril Fatface', cursive;
+	color: black;
+	font-size: 14px;
+	display: inline-block;
+	margin-left: 20px;
+	margin-bottom: 20px;
 }
