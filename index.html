@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Magical Giphy Button</title>
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<h1>Select an animal! Or fill in your own choice!</h1>
+		</header>
+		
+		<!-- Rendered buttons appear here -->
+		<div id="buttonsArea">
+		</div>
+
+		<!-- Ability to add new buttons -->
+		<form id="newButton">
+			<label for="buttonInput">Add New Button!</label>
+			<input type="text" id="buttonInput"> <br>
+			<input id="addButton" type="submit" value="Add a button">
+		</form>
+
+		<!-- button to wipe out the leftover gifs -->
+		<button id="clearPage">
+			Clear the Old Gifs
+		</button>
+		
+		<!-- Where the gif data appears -->
+		<div id="gifsForDays">
+		</div>
+
+	</div>
+
+	<!-- jquery sheet -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/giphyButton.js"></script>
+</body>
+</html>
