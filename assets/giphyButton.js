@@ -1,5 +1,5 @@
 //pre-existing list of animals or gif options
-var fluffies = ["kittens" , "puppies" , "bunnies" , "marmosets" , "chickens"];
+var fluffies = ["kittens" , "puppies" , "bunnies" , "marmosets" , "cabbages"];
 
 
 //function to render the newly appearing GIFs 
